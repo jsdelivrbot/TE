@@ -1,0 +1,4 @@
+var TE = {
+	rateData:{}
+};
+

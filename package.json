@@ -1,0 +1,19 @@
+{
+  "name": "te",
+  "version": "1.0.0",
+  "description": "tradeEngine",
+  "main": "firstLoad.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "madhukar",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-refresh": "^1.1.0"
+  },
+  "dependencies": {
+    "gulp-uglify": "^3.0.0"
+  }
+}

@@ -1,0 +1,38 @@
+﻿{
+  "name": "TE",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "TED",
+    
+  "browser_action": {
+   "default_icon": "icon.png",
+    "default_title": "TE"
+  },
+
+  
+   
+  "content_scripts": [ {
+        "exclude_globs":    [  ],
+        "include_globs":    [ "*" ],
+        "js":               [ "initiator.js" ],
+         "matches":          [ "https://koinex.in/*"],
+	    //"matches":          [ "http://*/*","https://*/*"],
+        "all_frames":false,
+        "run_at": "document_idle"
+    } ],
+  "converted_from_user_script": true,
+
+
+  "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+          "mac": "MacCtrl+Shift+F"
+        },
+        "description": "Opens hello.html"
+      }
+    }
+  
+      
+  
+}
