@@ -1,6 +1,6 @@
 TE.rate = (function () {
 	
-	function getPrice () {
+	var getPrice = function () {
 			
 				if(document.getElementsByClassName("balance")[1] == undefined){
 					return {
@@ -24,16 +24,17 @@ TE.rate = (function () {
 			}
 	
 	var currentBuyRate = function(){
-		return getPrice ().buy;
+		return getPrice().buy;
 	}
 	
 	var currentSellRate = function(){
-		return getPrice ().sell;
+		return getPrice().sell;
 	}	
 	
 	
   return {
-    currentBuyRate: currentBuyRate,
+    currentRate : getPrice,
+	currentBuyRate: currentBuyRate,
 	currentSellRate: currentSellRate
   }
 	

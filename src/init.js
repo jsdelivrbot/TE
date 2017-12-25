@@ -9,7 +9,9 @@ TE.init = (function () {
 	var startProgram = function(){
 		if(TE.isLoggedIn.status()){
 			TE.keepSessionAlive.active(5);
-			TE.trading.start();
+			console.log("preTrading check...")
+			TE.preTradingCheck.check(TE.trading.start);
+			
 			//TE.init.cgnto();
 		}
 	}
@@ -26,8 +28,8 @@ TE.init = (function () {
 	
 })();
 
-
-setTimeout(TE.init.startProgram,5000);
+console.log("program will start in 10 secs")
+setTimeout(TE.init.startProgram,10000);
 
 
 

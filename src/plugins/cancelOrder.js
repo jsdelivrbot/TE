@@ -88,15 +88,10 @@ TE.cancelOrder = (function () {
 				coin : parseFloat((TE.balance.coin()-coinBalance).toFixed(4)),
 				inr : parseFloat((inrBalance-TE.balance.inr()).toFixed(4))
 			}
-	
-			if(obj.coin>0){
-				localStorage.removeItem("sell");
-			}else{
-				localStorage.removeItem("buy");
-			}
-				
+					
 			
 			callback(true,obj);
+			
 		}else{
 				console.log("waiting for amout status to update : old: "+inrBalance+" | new: "+TE.balance.inr()+" | coin old: "+coinBalance+" | coin new : "+TE.balance.coin());
 			}

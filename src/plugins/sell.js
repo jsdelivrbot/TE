@@ -28,9 +28,7 @@ TE.sell = (function () {
 		book_coinVal = coinVol;
 		book_amt = amt;
 		
-		
-		localStorage.setItem('sell', {status:"init",coin:coinVol,amt:amt});
-		
+			
 		triggerActionButton(coinVol,amt,callback);
 	}
 	
@@ -105,7 +103,7 @@ TE.sell = (function () {
 				inr : parseFloat((inrBalance-TE.balance.inr()).toFixed(4))
 			}
 	
-			localStorage.setItem('sell', {status:"sold",coin:obj.coin,amt:obj.inr});
+			
 			
 			callback(true,obj);
 		}else{
@@ -116,8 +114,7 @@ TE.sell = (function () {
 	
 	var timeoutError = function(callback,obj){
 		
-		localStorage.setItem('sell', {status:"error",coin:book_coinVal,amt:book_amt});
-			
+					
 		clearInterval(popIntervalID);
 		clearTimeout(TO_popWinDisAppear); 
 		clearInterval(balanceIntervalID);
